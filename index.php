@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 use classes\Functions;
 use classes\Connection;
 
@@ -27,7 +27,7 @@ $app->get('/', function ($request, $response, $args) {
 // })->setArgument('name', 'World!');
 
 $app->get('/(:controller(/:action(/:param)))',
-  function($controller = 'home', $action = 'index', $param = null) {
+  function($controller = 'home', $action = 'index', $param = null)
 	{
 		echo $controller;
 	}
